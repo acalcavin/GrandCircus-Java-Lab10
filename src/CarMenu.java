@@ -31,29 +31,22 @@ public class CarMenu {
 
 		System.out.println("Menu Options:");
 
-		// print ArrayList
-		// add option to quit
-		// standard for loop
-
-		// while items exist in the inventory
-		int numberCars = inventory.size();
-
+		// while items exist in the inventory, do the following
 		while (inventory.size() > 0) {
 
 			int i = 0;
-			for (i = 0; i < inventory.size(); i++) {
+			for (i = 0; i < inventory.size(); i++) {  // print ArrayList
 
 				System.out.print((i + 1) + ". ");
 				System.out.print(inventory.get(i));
 			}
-			System.out.println((i + 1) + ". Quit\n");
+			System.out.println((i + 1) + ". Quit\n");  // add option to quit
 
 			System.out.println("Which car would you like?");
 			userSelection = scan.nextInt();
 			scan.nextLine();
 
-			// if selection, print selection
-			// if quit, sysout "Have a great day!"
+			// if quit, "Have a great day!"; else, print selection
 			if (userSelection == (i + 1)) {
 				System.out.println("Have a great day!");
 				break;
@@ -77,7 +70,7 @@ public class CarMenu {
 
 			} // end else
 
-			// if ArrayList still contains objects, while continues; i remains, is reset
+			// if ArrayList still contains objects, while loop continues; i is reset to 0
 
 		} // end while
 
